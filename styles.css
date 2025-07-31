@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  background: #f5f6fa;
+  background: #dde8fc;  /* Updated background */
   color: #232946;
   font-family: 'Segoe UI', Arial, sans-serif;
 }
@@ -85,11 +85,19 @@ main {
   min-width: 350px;
   max-width: 440px;
   margin-bottom: 4px;
-  transition: box-shadow 0.22s;
+  transition: box-shadow 0.22s, background 0.22s, color 0.22s;
+  cursor: pointer;
 }
 
 .card:hover {
   box-shadow: 0 8px 24px rgba(100,100,120,0.18);
+}
+
+.card.active, .card:active {
+  background: #eebbc3;
+  color: #232946;
+  box-shadow: 0 8px 28px rgba(100,120,140,0.23);
+  outline: 2px solid #232946;
 }
 
 h2 {
@@ -158,6 +166,12 @@ ul {
   flex-direction: column;
   gap: 7px;
   font-size: 1.08em;
+}
+
+.warning {
+  color: #cc3030;
+  font-weight: bold;
+  margin-top: 6px;
 }
 
 footer {
